@@ -35,9 +35,14 @@ function Signup() {
       data: {
         companyName: values.companyName,
       },
+      redirect: false,
     })
       .then(() => {
         actions.resetForm();
+
+        console.log("Signup - redirecting to the subdomain");
+        let { protocol, host } = window.location;
+        window.location.href = `${protocol}//${values.companyName.toLowerCase()}.${host}`;
       })
       .catch((error) => {
         setAlertMessage(error.message);

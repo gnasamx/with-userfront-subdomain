@@ -130,7 +130,7 @@ function Signin() {
         </Formik>
         <Center paddingTop={4}>
           <Text>
-            Already have an account?,&nbsp;
+            Already have an account?&nbsp;
             <NavLink href="/signup" passHref>
               <Link>Sign up</Link>
             </NavLink>

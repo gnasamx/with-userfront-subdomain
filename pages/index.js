@@ -13,7 +13,6 @@ import jwt from "jsonwebtoken";
 import NavLink from "next/link";
 import nookies from "nookies";
 import { useEffect, useState } from "react";
-import { destroyAllCookies } from "../lib/cookies";
 
 const publicKey = process.env.USERFRONT_PUBLIC_KEY;
 
@@ -71,10 +70,7 @@ export async function getServerSideProps(context) {
       };
     }
   } catch (error) {
-    if (error.message === "invalid token") {
-      destroyAllCookies(context);
-    }
-
+    console.error("Error - getServerSideProps: ", error.message);
     return {
       redirect: {
         destination: "/signin",
