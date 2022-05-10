@@ -29,10 +29,10 @@
 
 **Issue:**
 
-1. Cookie domain name is "localhost" or in production "exmaple".
+1. Cookie domain name is "localhost" or in production "example".
 2. Because of which there is no session on subdomain.
 
 **Expectation:**
 
-1. Cookies domain name should be ".localhost" or in production ".exmaple".
-2. Such that session can maintain on both domain and subdomain.
+1. Cookie domain name should be ".localhost" or in production ".example".
+2. Such that session can be maintained on both domain and subdomain.
